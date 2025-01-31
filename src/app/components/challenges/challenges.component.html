@@ -1,0 +1,17 @@
+<h2>Suggested Challenges</h2>
+
+<!-- Button to suggest challenge -->
+<button (click)="suggestChallenge()">Suggested Challenge</button>
+
+<!-- Display the suggested challenge if it exists -->
+<div>
+  <h3>{{ suggestedChallenge.title }}</h3>
+  <p>{{ suggestedChallenge.description }}</p>
+</div>
+
+<!-- Message before a challenge is suggested -->
+<ng-template #noChallenge>
+<div *ngIf="!suggestedChallenge">
+  <p>Click the button to get a suggested challenge!</p>
+</div>
+</ng-template>

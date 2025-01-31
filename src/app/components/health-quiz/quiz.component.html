@@ -1,0 +1,31 @@
+<div class="quiz-container">
+  <h2>🧠 Health Quiz</h2>
+
+  <button *ngIf="currentQuestionIndex === null" (click)="startQuiz()">
+      🎲 View Random Question
+  </button>
+
+  <div *ngIf="currentQuestionIndex !== null">
+      <div class="question-box">
+          <h3>{{ questions[currentQuestionIndex!].question }}</h3>
+      </div>
+
+      <ul>
+          <li *ngFor="let opt of questions[currentQuestionIndex!].options"
+              [ngClass]="{ 'selected': selectedAnswer === opt, 'correct': showResult && opt === correctAnswer, 'wrong': showResult && opt !== correctAnswer && selectedAnswer === opt }"
+              (click)="selectAnswer(opt)">
+              ✅ {{ opt }}
+          </li>
+      </ul>
+
+      <button (click)="submitAnswer()" [disabled]="!selectedAnswer">📤 Submit</button>&nbsp;&nbsp;
+      <button *ngIf="showResult" (click)="startQuiz()">➡️ Next Question</button>
+
+      <div *ngIf="showResult">
+          <p *ngIf="isCorrect" class="feedback" style="color: green;">✅ Correct!</p>
+          <p *ngIf="!isCorrect" class="feedback" style="color: red;">
+              ❌ Wrong! Correct Answer: <b>{{ correctAnswer }}</b>
+          </p>
+      </div>
+  </div>
+</div>

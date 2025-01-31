@@ -1,0 +1,71 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Specific styles for About Us Section */
+.about-container {
+  width: 98% !important;  /* Width kept the same */
+  max-width: 620px;  /* Max-width kept the same */
+  margin: 20px auto;
+  padding: 18px;  /* Padding kept the same */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* New gradient background */
+  border-radius: 8px;  /* Border radius kept the same */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);  /* Shadow kept the same */
+  text-align: center;
+  line-height: 1.45;  /* Line-height kept the same */
+}
+
+.about-container h2 {
+  font-size: 1.96rem;  /* Font size kept the same */
+  color: #fff;  /* Text color changed to white for contrast */
+  font-weight: 700;
+  margin-bottom: 17px;  /* Margin kept the same */
+}
+
+.about-container p {
+  font-size: 0.98rem;  /* Font size kept the same */
+  color: #fff;  /* Text color changed to white for contrast */
+  margin-bottom: 12px;  /* Margin kept the same */
+  line-height: 1.45;
+}
+
+.about-container p strong {
+  color: #f7f7f7;  /* Lighter color for strong text */
+  font-weight: 600;
+}
+
+/* To ensure it does not affect other styles */
+.about-container * {
+  margin: 0;
+  padding: 0;
+  text-align: left;  /* Ensuring no global text alignment */
+  box-sizing: border-box;
+}
+
+.about-container p {
+  margin-bottom: 7px;  /* Margin kept the same */
+}
+
+.about-container h2, .about-container p {
+  font-family: inherit;  /* Inherit font settings from the body */
+}
+
+/* Responsive Design for smaller screens */
+@media screen and (max-width: 768px) {
+  .about-container {
+    width: 98% !important;
+    padding: 13px;  /* Padding kept the same for mobile */
+  }
+
+  .about-container h2 {
+    font-size: 1.74rem;  /* Font size kept the same for mobile */
+  }
+
+  .about-container p {
+    font-size: 0.91rem;  /* Font size kept the same for mobile */
+  }
+}

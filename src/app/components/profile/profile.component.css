@@ -1,0 +1,111 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Profile Container */
+.profile-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+h2 {
+  font-size: 2.5rem;
+  color: #4a90e2; /* Light blue for a modern and fresh feel */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Profile Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+  font-size: 1.1rem;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+th {
+  background-color: #4a90e2; /* Light blue background */
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f9fc; /* Alternating row colors for readability */
+}
+
+tr:hover {
+  background-color: #e1f0f9; /* Hover effect */
+}
+
+td {
+  font-weight: 500;
+  color: #555;
+}
+
+/* Profile Information Blocks */
+.profile-info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.profile-info div {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  margin: 10px;
+}
+
+.profile-info div h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #4a90e2;
+  margin-bottom: 15px;
+}
+
+.profile-info div p {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .profile-container {
+    width: 95%;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  table {
+    font-size: 1rem;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    align-items: center;
+  }
+}

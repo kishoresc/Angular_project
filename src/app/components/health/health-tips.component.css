@@ -1,0 +1,78 @@
+.tips-container {
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  padding: 20px;
+  border-radius: 15px;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #333;
+  font-size: 24px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+li {
+  font-size: 18px;
+  color: #444;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tips-container ul {
+  list-style-type: none; /* Removes default bullets */
+  padding: 0;
+}
+
+.tips-container li {
+  display: block;  /* Ensures each tip appears on a new line */
+  margin-bottom: 8px; /* Adds spacing between tips */
+}
+
+.tips-container {
+  background: linear-gradient(to right, #f8a5c2, #ffcccc);
+  padding: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none; /* Removes default bullets */
+  padding: 0;
+}
+
+li {
+  display: block;  /* Ensures each tip appears on a new line */
+  margin-bottom: 10px; /* Adds spacing between tips */
+  font-size: 16px;
+  font-weight: 500;
+}

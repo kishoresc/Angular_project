@@ -1,0 +1,128 @@
+/* Reset Default Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar Container */
+nav {
+  background: linear-gradient(135deg, #2a9d8f, #264653); /* Fresh Green-Blue Gradient */
+  padding: 8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Left Section (Main Navigation Links) */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Right Section (Login & Register) */
+.auth-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* Navbar Links */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects for Links */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: scale(1.05);
+}
+
+/* Active Link Indicator */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 70%;
+}
+
+/* Login & Register Styling */
+.auth-links a {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Hover Effects for Login/Register */
+.auth-links a:hover {
+  background: white;
+  color: #2a9d8f;
+  transform: scale(1.1);
+}
+
+/* Navbar Responsiveness */
+@media screen and (max-width: 900px) {
+  nav {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .nav-links {
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+  }
+
+  .auth-links {
+      justify-content: center;
+      margin-top: 10px;
+      gap: 8px;
+  }
+
+  nav a {
+      margin: 4px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  nav {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .nav-links,
+  .auth-links {
+      width: 100%;
+      justify-content: center;
+  }
+
+  nav a {
+      display: block;
+      width: 100%;
+      padding: 8px;
+  }
+}

@@ -1,0 +1,79 @@
+/* Vibrant multi-color gradient background */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(-45deg, #ff9a9e, #ec3a08, #fad0c4, #fbc2eb, #8ec5fc, #ff758c);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 3D Glassmorphic Card */
+.exercise-container {
+  text-align: center;
+  padding: 30px;
+  background: rgba(173, 25, 187, 0.2); /* Glass effect */
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  width: 50%;
+  max-width: 1000px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease-in-out;
+  margin: auto;
+  margin-top: 100px;
+}
+
+/* Hover effect for depth */
+.exercise-container:hover {
+  transform: scale(1.08);
+  background: rgba(172, 207, 18, 0.822);
+}
+
+/* Title Styling */
+h2 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Exercise text */
+.exercise-text {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Button styling */
+button {
+  padding: 12px 25px;
+  border: none;
+  background: linear-gradient(45deg, #ff758c, #ff7eb3, #8ec5fc, #fad0c4);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Button hover effect */
+button:hover {
+  background: linear-gradient(45deg, #fad0c4, #ff758c, #8ec5fc);
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}

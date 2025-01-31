@@ -1,0 +1,34 @@
+<div class="container">
+  <!-- Motivation Section -->
+  <div class="motivation">
+    <h2>🌟 Health Goals & Motivation</h2>
+    <p class="quote">💡 <em>{{ currentQuote }}</em></p>
+    <button (click)="getNewQuote()">🔄 Get New Quote</button>
+  </div>
+
+  <!-- Healthy Goals Section -->
+  <div class="health-goals">
+    <h3>🎯 Your Health Goals</h3>
+    
+    <!-- Table Display -->
+    <table *ngIf="healthGoals.length > 0">
+      <thead>
+        <tr>
+          <th>Aim</th>
+          <th>Target</th>
+          <th>Progress</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let goal of healthGoals">
+          <td>{{ goal.aim }}</td>
+          <td>{{ goal.target }}</td>
+          <td>{{ goal.progress }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- No Goals Message -->
+    <p *ngIf="healthGoals.length === 0" style="color: white;">⚠️ No goals available.</p>
+  </div>
+</div>

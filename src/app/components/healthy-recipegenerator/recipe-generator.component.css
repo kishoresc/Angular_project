@@ -1,0 +1,79 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #141e30, #243b55); /* Deep blue gradient */
+  margin: 0;
+}
+
+.recipe-container {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3); /* Pink gradient */
+  border-radius: 10px;
+  width: 50%;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 100px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.recipe-container:hover {
+  transform: scale(1.05);
+}
+
+h2 {
+  color: #fff;
+  font-size: 28px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+  font-size: 18px;
+  color: #fce4ec;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 12px 25px;
+  border: none;
+  background: linear-gradient(to right, #ff9966, #ff5e62); /* Orange-red gradient */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  transform: scale(1.1);
+}
+
+.recipe-result {
+  font-size: 20px;
+  color: #fff;
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
